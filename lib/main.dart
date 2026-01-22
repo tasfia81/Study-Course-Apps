@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:task_manager_pro/Core/AppRoute/app_route.dart';
 import 'package:task_manager_pro/Screens/login_screen.dart';
 
 void main(){
@@ -13,6 +14,8 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return GetMaterialApp(
       debugShowCheckedModeBanner: false,
+      initialRoute: '/',
+      getPages: AppRoute.routes,
       home: LoginScreen(),
     );
   }

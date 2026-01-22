@@ -7,17 +7,20 @@ import 'package:task_manager_pro/Widget/Custom_TextFormField/text_form_field.dar
 import '../Widget/custom_card/learnova_card.dart';
 import 'package:get/get.dart';
 
-class LoginScreen extends StatefulWidget {
-  const LoginScreen({super.key});
+class CreateScreen extends StatefulWidget {
+  const CreateScreen({super.key});
 
   @override
-  State<LoginScreen> createState() => _LoginScreenState();
+  State<CreateScreen> createState() => _CreateScreenState();
 }
 
-class _LoginScreenState extends State<LoginScreen> {
+class _CreateScreenState extends State<CreateScreen> {
   int selectedIndex = 0;
+  final TextEditingController nameController = TextEditingController();
   final TextEditingController emailController = TextEditingController();
   final TextEditingController passwordController = TextEditingController();
+  final TextEditingController confirmPasswordController = TextEditingController();
+
 
   @override
   Widget build(BuildContext context) {
@@ -36,7 +39,7 @@ class _LoginScreenState extends State<LoginScreen> {
                   const SizedBox(height: 28),
 
                   const Text(
-                    'Log In',
+                    'Create Account',
                     style: TextStyle(
                       fontSize: 22,
                       fontWeight: FontWeight.w600,
@@ -46,7 +49,7 @@ class _LoginScreenState extends State<LoginScreen> {
 
                   const SizedBox(height: 15),
 
-                  /// ---------------- Student / Teacher ------------------
+                  /// -------- Student / Teacher --------
                   Row(
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
@@ -74,8 +77,17 @@ class _LoginScreenState extends State<LoginScreen> {
                     child: Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
-
-                        ///------------------- Email ---------------------
+                        ///----------- Name -----------------
+                        const Text('Name',style: TextStyle(
+                          fontSize: 14,fontWeight: FontWeight.w400,
+                          color: Color(0xFF737373)
+                        ),),
+                        const SizedBox(height: 8,),
+                        CustomTextFormField(
+                            hintText: 'Enter your name',
+                            controller: nameController,
+                        ),
+                        ///-------------- Email ------------------
                         const Text(
                           'Email',
                           style: TextStyle(
@@ -91,7 +103,8 @@ class _LoginScreenState extends State<LoginScreen> {
 
                         const SizedBox(height: 12),
 
-                        ///-------------------- Password --------------------------
+                        ///---------------- Password -----------------
+
                         const Text(
                           'Password',
                           style: TextStyle(
@@ -105,9 +118,21 @@ class _LoginScreenState extends State<LoginScreen> {
                           controller: passwordController,
                           isPassword: false,
                         ),
+                        const SizedBox(height: 8,),
 
+                        ///---------------- Confirm Password -----------------
+
+                        const Text('Confirm Password',style: TextStyle(
+                            fontSize: 14,fontWeight: FontWeight.w400,
+                            color: Color(0xFF737373)
+                        ),),
+                        const SizedBox(height: 8,),
+                        CustomTextFormField(
+                          isPassword: false,
+                          hintText: 'Confirm Password',
+                          controller: confirmPasswordController,
+                        ),
                         const SizedBox(height: 10),
-
                         Align(
                           alignment: Alignment.centerRight,
                           child: GestureDetector(
@@ -126,64 +151,28 @@ class _LoginScreenState extends State<LoginScreen> {
                         const SizedBox(height: 12),
 
                         AppPrimaryButton(
-                          text: 'Log In',
+                          text: 'Create Account',
                           onTap: () {},
                         ),
-
-                        const SizedBox(height: 10),
-
-                        ///------------------------- Google Login --------------------------
-                        GestureDetector(
-                          onTap: () {
-
-                          },
-                          child: Container(
-                            height: 50,
-                            width: double.infinity,
-                            decoration: BoxDecoration(
-                              borderRadius: BorderRadius.circular(12),
-                              border: Border.all(
-                                color: const Color(0xFFF1F4F8),
-                              ),
-                            ),
-                            child: Row(
-                              mainAxisAlignment: MainAxisAlignment.center,
-                              children: [
-                                Image.asset(
-                                  AssetsPaths.googleLogo,
-                                  height: 24,
-                                ),
-                                const SizedBox(width: 8),
-                                const Text(
-                                  'Login with Google',
-                                  style: TextStyle(
-                                    fontSize: 16,
-                                    color: Color(0xFF363636),
-                                  ),
-                                ),
-                              ],
-                            ),
-                          ),
-                        ),
-
                         const SizedBox(height: 16),
 
-                        ///--------------- Bottom Text --------------
+                        ///------------------- Bottom Text -------------------
+
                         GestureDetector(
                           onTap: (){
-                            Get.toNamed(AppRoute.createAccount);
+                            Get.toNamed(AppRoute.logIn);
                           },
                           child: Center(
                             child: RichText(
                               text: const TextSpan(
                                 style: TextStyle(
                                   fontSize: 14,
-                                  color: Color(0xFF1F1F1F),
+                                  color: Color(0xFF545454),
                                 ),
                                 children: [
-                                  TextSpan(text: 'New to Learnova? '),
+                                  TextSpan(text: 'Already have an account? '),
                                   TextSpan(
-                                    text: 'Create an Account',
+                                    text: 'Log In',
                                     style: TextStyle(
                                       color: Color(0xFF008DE7),
                                     ),
@@ -200,15 +189,15 @@ class _LoginScreenState extends State<LoginScreen> {
               ),
             ),
 
-            /// =================  FIXED BOTTOM IMAGE =================
+            /// ================= FIXED BOTTOM IMAGE =================
             Positioned(
               bottom: 0,
               left: 0,
               right: 0,
               child: IgnorePointer(
                 child: Image.asset(
-                  AssetsPaths.ellipse1,
-                  height: 120,
+                  AssetsPaths.ellipse3,
+                  height: 80,
                   fit: BoxFit.cover,
                 ),
               ),
@@ -219,4 +208,3 @@ class _LoginScreenState extends State<LoginScreen> {
     );
   }
 }
-

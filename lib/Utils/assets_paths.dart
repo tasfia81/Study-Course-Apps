@@ -7,4 +7,5 @@ class AssetsPaths {
   static const String ellipse2 = '$_imagePath/Ellipse 2.png';
   static const String ellipse37 = '$_imagePath/Ellipse 37.png';
   static const String googleLogo = '$_imagePath/Google.png';
+  static const String ellipse3 = '$_imagePath/Ellipse3.png';
 }
