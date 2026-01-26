@@ -11,7 +11,11 @@ class AssetsPaths {
   static const String googleLogo = '$_imagePath/Google.png';
   static const String ellipse3 = '$_imagePath/Ellipse3.png';
   static const String studyingTogether = '$_imagePath/studying_together.png';
+  static const String studyingTogether1 = '$_imagePath/studying-together-1.png';
   static const String unSplashAvatar = '$_imagePath/unSplash_avatar.png';
+  static const String unSplashAvatar2 = '$_imagePath/unsplash_avatar_2.png';
+  static const String likedActive = '$_imagePath/liked-active.png';
+  static const String likedUnActive = '$_imagePath/liked-unactive.png';
 
   ///================================ ICONS ==================================
 

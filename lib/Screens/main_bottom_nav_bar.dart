@@ -38,11 +38,11 @@ class _MainBottomNavBarState extends State<MainBottomNavBar> {
       bottomNavigationBar: Container(
         decoration: BoxDecoration(
           color: Colors.white,
-          borderRadius: _topBorderRadius, // ✅ only top rounded
+          borderRadius: _topBorderRadius, //  only top rounded
         ),
 
         child: ClipRRect(
-          borderRadius: _topBorderRadius, // ✅ same radius (VERY IMPORTANT)
+          borderRadius: _topBorderRadius, //  same radius (VERY IMPORTANT)
           child: BottomNavigationBar(
             currentIndex: _currentIndex,
             onTap: (index) {

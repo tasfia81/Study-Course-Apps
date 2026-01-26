@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-
+import 'package:flutter_staggered_grid_view/flutter_staggered_grid_view.dart';
 import '../Custom_Reel_Card/reel_card.dart';
 
 class ReelGrid extends StatelessWidget {
@@ -7,17 +7,16 @@ class ReelGrid extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return GridView.builder(
+    return MasonryGridView.count(
       padding: const EdgeInsets.all(12),
-      gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
-        crossAxisCount: 2,
-        crossAxisSpacing: 12,
-        mainAxisSpacing: 12,
-        childAspectRatio: 0.75,
-      ),
-      itemCount: 6,
+      crossAxisCount: 2,
+      mainAxisSpacing: 12,
+      crossAxisSpacing: 12,
+      itemCount: 12,
       itemBuilder: (context, index) {
-        return const ReelCard();
+        return ReelCard(
+          isBig: index % 3 == 0, //  big / small logic
+        );
       },
     );
   }
