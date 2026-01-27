@@ -5,6 +5,8 @@ import 'package:task_manager_pro/Screens/home_screen.dart';
 import 'package:task_manager_pro/Screens/login_screen.dart';
 import 'package:task_manager_pro/Screens/main_bottom_nav_bar.dart';
 import 'package:task_manager_pro/Screens/reel_screen.dart';
+import 'package:task_manager_pro/Screens/reel_search_screen.dart';
+import 'package:task_manager_pro/Screens/understanding_screen.dart';
 import 'package:task_manager_pro/Widget/Custom_Reel_Card/reel_card.dart';
 
 void main(){
@@ -24,7 +26,8 @@ class MyApp extends StatelessWidget {
       //home: MainBottomNavBar(),
       //home: ReelCard(),
      // home: HomeScreen(),
-      home: ReelScreen(),
+     // home: ReelSearchScreen(),
+      home: UnderstandingScreen(),
     );
   }
 }
