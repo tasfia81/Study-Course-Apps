@@ -24,15 +24,6 @@ class _ReelScreenState extends State<ReelScreen> {
       body: Stack(
         children: [
           const ReelBackground(),
-          // ReelLikeButton(
-          //     isLiked: isLiked,
-          //     onTap: (){
-          //       setState(() {
-          //         isLiked =! isLiked;
-          //       });
-          //     }
-          // ),
-
           Positioned(
             left: 16,
               right: 16,

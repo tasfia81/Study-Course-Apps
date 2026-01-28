@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:task_manager_pro/Core/AppRoute/app_route.dart';
+import 'package:task_manager_pro/Screens/explanation_screen.dart';
 import 'package:task_manager_pro/Screens/home_screen.dart';
 import 'package:task_manager_pro/Screens/login_screen.dart';
 import 'package:task_manager_pro/Screens/main_bottom_nav_bar.dart';
@@ -27,7 +28,8 @@ class MyApp extends StatelessWidget {
       //home: ReelCard(),
      // home: HomeScreen(),
      // home: ReelSearchScreen(),
-      home: UnderstandingScreen(),
+     // home: UnderstandingScreen(),
+      home: ExplanationScreen(),
     );
   }
 }

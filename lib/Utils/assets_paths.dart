@@ -28,4 +28,6 @@ class AssetsPaths {
   static const String bookSquareIcon = '$_iconsPath/book-square.png';
   static const String profileIcon = '$_iconsPath/profile.png';
   static const String profileActiveIcon = '$_iconsPath/profile_active.png';
+  static const String watch = '$_iconsPath/watch.png';
+  static const String watchTime = '$_iconsPath/watch_time.png';
 }
