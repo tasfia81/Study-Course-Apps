@@ -16,6 +16,7 @@ class AssetsPaths {
   static const String unSplashAvatar2 = '$_imagePath/unsplash_avatar_2.png';
   static const String likedActive = '$_imagePath/liked-active.png';
   static const String likedUnActive = '$_imagePath/liked-unactive.png';
+  static const String profilePic = '$_imagePath/profile_pic.png';
 
   ///================================ ICONS ==================================
 
@@ -30,4 +31,5 @@ class AssetsPaths {
   static const String profileActiveIcon = '$_iconsPath/profile_active.png';
   static const String watch = '$_iconsPath/watch.png';
   static const String watchTime = '$_iconsPath/watch_time.png';
+  static const String settingIcon = '$_iconsPath/setting_icon.png';
 }

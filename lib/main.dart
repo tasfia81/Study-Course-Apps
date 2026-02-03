@@ -10,6 +10,8 @@ import 'package:task_manager_pro/Screens/reel_search_screen.dart';
 import 'package:task_manager_pro/Screens/understanding_screen.dart';
 import 'package:task_manager_pro/Widget/Custom_Reel_Card/reel_card.dart';
 
+import 'Screens/profile_screen.dart';
+
 void main(){
   runApp(const MyApp());
 }
@@ -29,7 +31,8 @@ class MyApp extends StatelessWidget {
      // home: HomeScreen(),
      // home: ReelSearchScreen(),
      // home: UnderstandingScreen(),
-      home: ExplanationScreen(),
+     // home: ExplanationScreen(),
+      home: ProfileScreen(),
     );
   }
 }
