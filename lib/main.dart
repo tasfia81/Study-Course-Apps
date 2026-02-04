@@ -25,14 +25,14 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       initialRoute: '/',
       getPages: AppRoute.routes,
-     // home: LoginScreen(),
+      home: LoginScreen(),
       //home: MainBottomNavBar(),
       //home: ReelCard(),
      // home: HomeScreen(),
      // home: ReelSearchScreen(),
      // home: UnderstandingScreen(),
      // home: ExplanationScreen(),
-      home: ProfileScreen(),
+      //home: ProfileScreen(),
     );
   }
 }

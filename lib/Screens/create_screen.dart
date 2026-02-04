@@ -3,6 +3,7 @@ import 'package:task_manager_pro/Core/AppRoute/app_route.dart';
 import 'package:task_manager_pro/Utils/assets_paths.dart';
 import 'package:task_manager_pro/Widget/Custom_Button/app_primary_button.dart';
 import 'package:task_manager_pro/Widget/Custom_Role/role_selector_item.dart';
+import 'package:task_manager_pro/Widget/Custom_Show_dialog/dialog_helper.dart';
 import 'package:task_manager_pro/Widget/Custom_TextFormField/text_form_field.dart';
 import '../Widget/custom_card/learnova_card.dart';
 import 'package:get/get.dart';
@@ -152,7 +153,14 @@ class _CreateScreenState extends State<CreateScreen> {
 
                         AppPrimaryButton(
                           text: 'Create Account',
-                          onTap: () {},
+                          onTap: () {
+                            DialogHelper.showGradeDialog(
+                                context: context,
+                                onSelected: (grade){
+                                  Navigator.pushNamed(context, AppRoute.reelScreen);
+                                }
+                            );
+                          },
                         ),
                         const SizedBox(height: 16),
 
