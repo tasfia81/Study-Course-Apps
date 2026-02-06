@@ -23,6 +23,7 @@ class _ReelScreenState extends State<ReelScreen> {
       backgroundColor: Colors.black,
       body: Stack(
         children: [
+        //  Icon(Icons.search),
           const ReelBackground(),
           Positioned(
             left: 16,
@@ -40,7 +41,9 @@ class _ReelScreenState extends State<ReelScreen> {
                         });
                       },
                     onLikedTap: () {
-                      isLiked =! isLiked;
+                        setState(() {
+                          isLiked =! isLiked;
+                        });
                   },
                   ),
                   const SizedBox(height: 8,),

@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:task_manager_pro/Core/AppRoute/app_route.dart';
 import 'package:task_manager_pro/Widget/Custom_Category_Chip/category_chip.dart';
 import 'package:task_manager_pro/Widget/Custom_Reel_Grid/reel_grid.dart';
+import 'package:get/get.dart';
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({super.key});
@@ -31,8 +33,11 @@ class HomeScreen extends StatelessWidget {
                       ),
                     ),
                     IconButton(
-                      onPressed: () {},
+                      onPressed: () {
+                        Get.toNamed(AppRoute.reelSearchScreen);
+                      },
                       icon: const Icon(Icons.search),
+
                     ),
                   ],
                 ),
@@ -70,12 +75,17 @@ class HomeScreen extends StatelessWidget {
 
               ///------------------ Tab Content --------------------------
               Expanded(
-                child: TabBarView(
-                  children: const [
-                    ReelGrid(),
-                    ReelGrid(),
-                    ReelGrid(),
-                  ],
+                child: GestureDetector(
+                  onTap: (){
+                    Get.toNamed(AppRoute.reelScreen);
+                  },
+                  child: TabBarView(
+                    children: const [
+                      ReelGrid(),
+                      ReelGrid(),
+                      ReelGrid(),
+                    ],
+                  ),
                 ),
               ),
             ],

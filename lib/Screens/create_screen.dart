@@ -157,7 +157,7 @@ class _CreateScreenState extends State<CreateScreen> {
                            showDialog(
                                context: context,
                                builder: (_) => CreateAccountDialog(onGetStarted: (){
-                                 Navigator.pushNamed(context, AppRoute.reelScreen);
+                                 Navigator.pushNamed(context, AppRoute.homeScreen);
                                })
                            );
                           },

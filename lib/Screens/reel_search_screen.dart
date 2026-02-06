@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:task_manager_pro/Widget/Custom_Button/back_button.dart';
 import 'package:task_manager_pro/Widget/Custom_Text_Container/custom_search_bar.dart';
 import 'package:task_manager_pro/Widget/Custom_Text_Container/custom_text_container.dart';
+import 'package:get/get.dart';
 
 class ReelSearchScreen extends StatefulWidget {
   const ReelSearchScreen({super.key});
@@ -19,7 +20,12 @@ class _ReelSearchScreenState extends State<ReelSearchScreen> {
         padding: const EdgeInsets.all(16),
         child: Column(
           children: [
-            CustomBackButton(),
+            GestureDetector(
+              onTap: (){
+                Get.back();
+              },
+                child: CustomBackButton()
+            ),
             Container(
               height: 400,
               width: 390,

@@ -64,9 +64,9 @@ class ReelUserRow extends StatelessWidget {
           onTap: onLikedTap,
           child:
             Image.asset(
-              height: 20,
-                width: 20,
-                isLiked? AssetsPaths.likedUnActive : AssetsPaths.likedActive
+              height: 40,
+                width: 40,
+                isLiked? AssetsPaths.likedActive : AssetsPaths.likedUnActive
             )
           ),
       ],
