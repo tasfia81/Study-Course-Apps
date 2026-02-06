@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 
 class CustomBackButton extends StatelessWidget {
   const CustomBackButton({
@@ -9,7 +10,11 @@ class CustomBackButton extends StatelessWidget {
   Widget build(BuildContext context) {
     return Row(
       children: [
-        IconButton(onPressed: (){}, icon: Icon(Icons.arrow_circle_left_outlined)),
+        GestureDetector(
+          onTap: (){
+            Get.back();
+          },
+            child: IconButton(onPressed: (){}, icon: Icon(Icons.arrow_circle_left_outlined))),
         SizedBox(width: 4,),
         Text('Back',style: TextStyle(
             fontSize: 14,

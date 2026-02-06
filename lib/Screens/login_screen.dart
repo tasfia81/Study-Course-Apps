@@ -127,7 +127,9 @@ class _LoginScreenState extends State<LoginScreen> {
 
                         AppPrimaryButton(
                           text: 'Log In',
-                          onTap: () {},
+                          onTap: () {
+                            Get.toNamed(AppRoute.homeScreen);
+                          },
                         ),
 
                         const SizedBox(height: 10),

@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:task_manager_pro/Core/AppRoute/app_route.dart';
 import 'package:task_manager_pro/Utils/assets_paths.dart';
+import 'package:get/get.dart';
 
 class ReelUserRow extends StatelessWidget {
   final bool isFollowing;
@@ -19,9 +21,14 @@ class ReelUserRow extends StatelessWidget {
   Widget build(BuildContext context) {
     return Row(
       children: [
-        const CircleAvatar(
-          radius: 16,
-          backgroundImage: AssetImage(AssetsPaths.unSplashAvatar2),
+        GestureDetector(
+          onTap: (){
+            Get.toNamed(AppRoute.profileScreen);
+          },
+          child: const CircleAvatar(
+            radius: 16,
+            backgroundImage: AssetImage(AssetsPaths.unSplashAvatar2),
+          ),
         ),
         const SizedBox(width: 8),
         const Text(
